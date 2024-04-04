@@ -292,7 +292,7 @@ def train_model(training_data, validation_data = "", evaluation_data = "", num_l
     training_size = "_"+str(len(training_data))
     accuracies = str(fscore)+"_"+str(auc)
                      
-    model_path = "models/"+timestamp+accuracies+training_size+".params"
+    model_path = "/content/Active_learning_Monarch/models/"+timestamp+accuracies+training_size+".params"
 
     torch.save(model.state_dict(), model_path)
     return model_path
